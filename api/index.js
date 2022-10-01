@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const connectDB = require('./config/db');
 const todoRouter = require('./router/todos')
 
@@ -8,6 +9,7 @@ const port = process.env.PORT || 8080;
 // To establish a MongoDB connection
 connectDB()
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

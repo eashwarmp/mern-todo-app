@@ -4,11 +4,13 @@
   "description": "This is a todo project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon api/index.js"
+    "start": "nodemon api/index.js",
+    "start-ui": "cd ui && npm run start"
   },
   "author": "Eashwar MP",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "mongoose": "^6.6.0",
     "nodemon": "^2.0.19"
